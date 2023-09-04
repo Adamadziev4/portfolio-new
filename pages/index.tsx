@@ -18,7 +18,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h1 -mt-14"
           >
             Добро <span className="text-accent">пожаловать</span> <br />
             Обо мне

@@ -117,7 +117,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 pb-4"
+            className="h2 pb-4 -mt-20"
           >
             Технологии <span className="text-accent">.</span>
           </motion.h2>
@@ -221,7 +221,7 @@ const About = () => {
                 <div>{item.stage}</div>
                 <div className="flex gap-x-4"></div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-6 gap-x-12 justify-center items-center">
+                <div className="grid grid-cols-4 sm:grid-cols-4 gap-y-6 gap-x-12 justify-center items-center">
                   {item.icons?.map((icon, iconIndex) => (
                     <div
                       key={icon.title}
