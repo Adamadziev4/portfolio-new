@@ -100,8 +100,8 @@ const WorkSlider = () => {
       pagination={{ clickable: true }}
       modules={[Pagination]}
     >
-      {workData.slice(0, 8).map((item, i) => (
-        <SwiperSlide key={item.imgUrl}>
+      {workData.slice(0, 8).map((item) => (
+        <SwiperSlide key={item.id}>
           <div
             className="relative rounded-lg overflow-hidden flex items-center justify-center group"
             key={item.imgUrl}
@@ -111,7 +111,7 @@ const WorkSlider = () => {
                 src={item.imgUrl}
                 width={500}
                 height={300}
-                alt={`Портфолио-${i + 1}`}
+                alt={`Портфолио-${item.id}`}
               />
               <div
                 className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cbb1]

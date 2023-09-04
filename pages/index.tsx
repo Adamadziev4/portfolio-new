@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import ProjectsBtn from "../components/ProjectsBtn";
+
 import { fadeIn } from "../variants";
+import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
 import ParticlesContainer from "../components/ParticlesContainer";
 
@@ -19,21 +20,23 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            Добро <span className="text-accent">пожаловать</span> <br />
+            Обо мне
           </motion.h1>
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-white"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            quia nostrum architecto ullam facilis cum provident odit.
-            Voluptatum, magni. Qui.
+            Меня зовут Залимхан, мне 22 года <br /> Я программист, разработчик
+            сайтов <br /> Разрабатываю сайты на акутальных веб технологиях{" "}
+            <br /> <br />
+            Окончил Дагестанский Государственный Университет - факультет
+            информатики и информационных технологий. Учусь в магистратуре
           </motion.p>
-          <div className="flex justify-center xl:hidden relative">
+          <div className="flex justify-center xl:hidden relative z-10">
             <ProjectsBtn />
           </div>
           <motion.div

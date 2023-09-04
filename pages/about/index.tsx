@@ -1,21 +1,7 @@
-/* eslint-disable react/jsx-key */
 import React from "react";
+import Image from "next/image";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma,
-} from "react-icons/fa";
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
-} from "react-icons/si";
 
 import Avatar from "../../components/Avatar";
 import { Circles } from "../../components/Circles";
@@ -23,73 +9,90 @@ import { fadeIn } from "../../variants";
 
 const aboutData = [
   {
-    title: "skills",
+    title: "Технологии",
     info: [
       {
-        title: "Web Development",
+        // title: "Разработка",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          {
+            title: "HTML",
+            imgUrl: "/techIcons/html.png",
+          },
+          {
+            title: "CSS",
+            imgUrl: "/techIcons/css.png",
+          },
+          {
+            title: "TypeScript",
+            imgUrl: "/techIcons/ts.png",
+          },
+          {
+            title: "React",
+            imgUrl: "/techIcons/react.png",
+          },
+          {
+            title: "Next",
+            imgUrl: "/techIcons/nextjs.png",
+          },
+          {
+            title: "Node",
+            imgUrl: "/techIcons/node.png",
+          },
+          {
+            title: "Postgre",
+            imgUrl: "/techIcons/pgsql.png",
+          },
+          {
+            title: "Strapi",
+            imgUrl: "/techIcons/strapi.png",
+          },
         ],
       },
-      {
-        title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
-      },
+      // {
+      //   title: "Дизайн",
+      //   icons: ["/techIcons/figma.png"],
+      // },
     ],
   },
+  // {
+  //   title: "awards",
+  //   info: [
+  //     {
+  //       title: "Webby Awards - Honoree",
+  //       stage: "2011 - 2012",
+  //     },
+  //     {
+  //       title: "Adobe Design Achievement Awards - Finalist",
+  //       stage: "2009 - 2010",
+  //     },
+  //   ],
+  // },
   {
-    title: "awards",
+    title: "Опыт",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "Интернет-провайдер Ellco",
+        stage: "Март 2023 - Сентябрь 2023",
       },
     ],
   },
-  {
-    title: "experience",
-    info: [
-      {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
-      },
-      {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
-      },
-    ],
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
-      },
-    ],
-  },
+  // {
+  //   title: "credentials",
+  //   info: [
+  //     {
+  //       title: "Web Development - ABC University, LA, CA",
+  //       stage: "2011",
+  //     },
+  //     {
+  //       title: "Computer Science Diploma - AV Technical Institute",
+  //       stage: "2009",
+  //     },
+  //     {
+  //       title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
+  //       stage: "2006",
+  //     },
+  //   ],
+  // },
 ];
 
 const About = () => {
@@ -114,23 +117,22 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2"
+            className="h2 pb-4"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Технологии <span className="text-accent">.</span>
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-8 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I began freelancing as a developer. Since then, Ive
-            done remote work for agencies, counsulted for startups, and
-            collaborated on digital products for business and consumer use.
+            Я использую актуальные веб-технологии, с помощью которых можно
+            разрабатывать SEO-оптимизированные и быстрые веб-сайты, которые в
+            дальнейшем можно легко масштабировать и продвигать
           </motion.p>
-          <motion.div
+          {/* <motion.div
             variants={fadeIn("right", 0.6)}
             initial="hidden"
             animate="show"
@@ -144,7 +146,6 @@ const About = () => {
               >
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   ~1.5
-                  {/* <CountUp start={0} end={1} duration={5} /> + */}
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience
@@ -184,7 +185,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
         <motion.div
           variants={fadeIn("left", 0.4)}
@@ -193,7 +194,7 @@ const About = () => {
           exit="hidden"
           className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+          <div className="flex gap-x-6 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, i) => (
               <div
                 key={item.title}
@@ -216,14 +217,20 @@ const About = () => {
                 className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
               >
                 <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                <div className="hidden md:flex">-</div>
+                <div className="hidden md:flex"></div>
                 <div>{item.stage}</div>
                 <div className="flex gap-x-4"></div>
 
-                <div className="flex gap-x-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-6 gap-x-12 justify-center items-center">
                   {item.icons?.map((icon, iconIndex) => (
-                    <div className="text-2xl flex flex-col text-white">
-                      {icon}
+                    <div className="text-[14px] text-white/80 flex flex-col justify-center items-center gap-1">
+                      <Image
+                        src={icon.imgUrl}
+                        width={50}
+                        height={50}
+                        alt="Технология"
+                      />
+                      <span>{icon.title}</span>
                     </div>
                   ))}
                 </div>
