@@ -223,7 +223,10 @@ const About = () => {
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-6 gap-x-12 justify-center items-center">
                   {item.icons?.map((icon, iconIndex) => (
-                    <div className="text-[14px] text-white/80 flex flex-col justify-center items-center gap-1">
+                    <div
+                      key={icon.title}
+                      className="text-[14px] text-white/80 flex flex-col justify-center items-center gap-1"
+                    >
                       <Image
                         src={icon.imgUrl}
                         width={50}
