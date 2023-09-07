@@ -57,7 +57,7 @@ const Nav = () => {
             </div>
             <div className="flex flex-col justify-center items-center">
               {nav.icon}
-              <p className="text-sm">{nav.name}</p>
+              <p className="text-sm xl:hidden">{nav.name}</p>
             </div>
           </Link>
         ))}
