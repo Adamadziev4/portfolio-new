@@ -7,7 +7,7 @@ import Avatar from "../../components/Avatar";
 import { Circles } from "../../components/Circles";
 import { fadeIn } from "../../variants";
 
-const aboutData = [
+export const aboutData = [
   {
     title: "Технологии",
     info: [
@@ -132,60 +132,6 @@ const About = () => {
             разрабатывать SEO-оптимизированные и быстрые веб-сайты, которые в
             дальнейшем можно легко масштабировать и продвигать
           </motion.p>
-          {/* <motion.div
-            variants={fadeIn("right", 0.6)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
-          >
-            <div className="flex flex-1 xl:gap-x-6">
-              <div
-                className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute
-              after:top-0 after:right-0"
-              >
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  ~1.5
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of experience
-                </div>
-              </div>
-
-              <div
-                className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute
-              after:top-0 after:right-0"
-              >
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients
-                </div>
-              </div>
-
-              <div
-                className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute
-              after:top-0 after:right-0"
-              >
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={5} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished projects
-                </div>
-              </div>
-
-              <div className="relative flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={3} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning awards
-                </div>
-              </div>
-            </div>
-          </motion.div> */}
         </div>
         <motion.div
           variants={fadeIn("left", 0.4)}
@@ -225,7 +171,7 @@ const About = () => {
                   {item.icons?.map((icon, iconIndex) => (
                     <div
                       key={icon.title}
-                      className="text-[14px] text-white/80 flex flex-col justify-center items-center gap-1"
+                      className="text-[14px] text-white/80 flex flex-col justify-center items-center gap-1 hover:scale-105 transition-all duration-200"
                     >
                       <Image
                         src={icon.imgUrl}

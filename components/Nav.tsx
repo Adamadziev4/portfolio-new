@@ -10,10 +10,10 @@ import {
 } from "react-icons/hi2";
 
 export const navData = [
-  { name: "home", path: "/", icon: <HiHome /> },
-  { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "services", path: "/my-services", icon: <HiRectangleGroup /> },
-  { name: "work", path: "/work", icon: <HiViewColumns /> },
+  { name: "Главная", path: "/", icon: <HiHome /> },
+  { name: "Технологии", path: "/about", icon: <HiRectangleGroup /> },
+  // { name: "Мои работы", path: "/my-services", icon: <HiRectangleGroup /> },
+  { name: "Мои работы", path: "/work", icon: <HiViewColumns /> },
   // {
   //   name: "testimonials",
   //   path: "/testimonials",
@@ -55,7 +55,10 @@ const Nav = () => {
                 <div className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2"></div>
               </div>
             </div>
-            {nav.icon}
+            <div className="flex flex-col justify-center items-center">
+              {nav.icon}
+              <p className="text-sm">{nav.name}</p>
+            </div>
           </Link>
         ))}
       </div>
