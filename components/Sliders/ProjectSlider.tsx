@@ -1,114 +1,11 @@
 import Image from "next/image";
+import React from "react";
+import { BsArrowRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
-import { BsArrowRight } from "react-icons/bs";
+import { workData } from "../../components/WorkSlider";
 
-import "swiper/css";
-import "swiper/css/grid";
-import "swiper/css/pagination";
-
-export const workSlides = {
-  slides: [
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-      ],
-    },
-  ],
-};
-
-export const workData = [
-  {
-    id: 1,
-    title: "Мужская одежда",
-    imgUrl: "/portfolio/akula/main.png",
-    imgUrls: ["", "", ""],
-  },
-  {
-    id: 2,
-    title: "Сервис доставки еды",
-    imgUrl: "/portfolio/food-dashboard/main.png",
-    imgUrls: ["", "", ""],
-  },
-  {
-    id: 3,
-    title: "Кроссовки",
-    imgUrl: "/portfolio/sneakers/main.png",
-    imgUrls: ["", "", ""],
-  },
-];
-
-// const workData = [
-//   {
-//     id: 1,
-//     imgUrl: "/thumb1.jpg",
-//   },
-//   {
-//     id: 2,
-//     imgUrl: "/thumb2.jpg",
-//   },
-//   {
-//     id: 3,
-//     imgUrl: "/thumb3.jpg",
-//   },
-//   {
-//     id: 4,
-//     imgUrl: "/thumb4.jpg",
-//   },
-//   {
-//     id: 5,
-//     imgUrl: "/thumb1.jpg",
-//   },
-//   {
-//     id: 6,
-//     imgUrl: "/thumb4.jpg",
-//   },
-//   {
-//     id: 7,
-//     imgUrl: "/thumb2.jpg",
-//   },
-//   {
-//     id: 8,
-//     imgUrl: "/thumb3.jpg",
-//   },
-// ];
-
-const WorkSlider = () => {
+export const ProjectSlider = ({ id }: { id: number }) => {
   return (
     <Swiper
       spaceBetween={20}
@@ -169,5 +66,3 @@ const WorkSlider = () => {
     </Swiper>
   );
 };
-
-export default WorkSlider;
