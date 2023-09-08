@@ -68,7 +68,7 @@ export const aboutData = [
   //   ],
   // },
   {
-    title: "Опыт",
+    title: "Опыт работы",
     info: [
       {
         title: "Интернет-провайдер Ellco",

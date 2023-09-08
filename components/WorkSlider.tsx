@@ -55,37 +55,55 @@ export const workSlides = {
 const workData = [
   {
     id: 1,
-    imgUrl: "/thumb1.jpg",
+    title: "Мужская одежда",
+    imgUrl: "/portfolio/akula/main.png",
   },
   {
     id: 2,
-    imgUrl: "/thumb2.jpg",
+    title: "Сервис доставки еды",
+    imgUrl: "/portfolio/food-dashboard/main.png",
   },
   {
     id: 3,
-    imgUrl: "/thumb3.jpg",
-  },
-  {
-    id: 4,
-    imgUrl: "/thumb4.jpg",
-  },
-  {
-    id: 5,
-    imgUrl: "/thumb1.jpg",
-  },
-  {
-    id: 6,
-    imgUrl: "/thumb4.jpg",
-  },
-  {
-    id: 7,
-    imgUrl: "/thumb2.jpg",
-  },
-  {
-    id: 8,
-    imgUrl: "/thumb3.jpg",
+    title: "Кроссовки",
+    imgUrl: "/portfolio/sneakers/main.png",
   },
 ];
+
+// const workData = [
+//   {
+//     id: 1,
+//     imgUrl: "/thumb1.jpg",
+//   },
+//   {
+//     id: 2,
+//     imgUrl: "/thumb2.jpg",
+//   },
+//   {
+//     id: 3,
+//     imgUrl: "/thumb3.jpg",
+//   },
+//   {
+//     id: 4,
+//     imgUrl: "/thumb4.jpg",
+//   },
+//   {
+//     id: 5,
+//     imgUrl: "/thumb1.jpg",
+//   },
+//   {
+//     id: 6,
+//     imgUrl: "/thumb4.jpg",
+//   },
+//   {
+//     id: 7,
+//     imgUrl: "/thumb2.jpg",
+//   },
+//   {
+//     id: 8,
+//     imgUrl: "/thumb3.jpg",
+//   },
+// ];
 
 const WorkSlider = () => {
   return (
@@ -103,7 +121,7 @@ const WorkSlider = () => {
       {workData.slice(0, 8).map((item) => (
         <SwiperSlide key={item.id}>
           <div
-            className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+            className="relative rounded-lg overflow-hidden flex items-center justify-center group cursor-pointer"
             key={item.imgUrl}
           >
             <div className="flex items-center justify-center relative overflow-hidden group">
@@ -121,13 +139,17 @@ const WorkSlider = () => {
                 className="absolute bottom-0 translate-y-full group-hover:-translate-y-10
                     group-hover:xl:-translate-y-20 transition-all duration-300"
               >
-                <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                  <div className="delay-100">LIVE</div>
+                <div
+                  className="flex items-center gap-x-2 text-[13px] tracking-[0.2em] bg-slate-500
+                text-white py-1 px-2"
+                >
+                  {/* <div className="delay-100">LIVE</div> */}
                   <div
                     className="translate-y-[500%] group-hover:translate-y-0 transition-all
-                      duration-300 delay-150"
+                      duration-300 delay-150 "
                   >
-                    PROJECT
+                    <p className="">{item.title}</p>
+                    {/* PROJECT */}
                   </div>
                   <div
                     className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all
