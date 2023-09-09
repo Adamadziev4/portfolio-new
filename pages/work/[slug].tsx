@@ -6,7 +6,6 @@ import { ProjectSlider } from "../../components/Sliders/ProjectSlider";
 import { fadeIn } from "../../variants";
 import { useRouter } from "next/router";
 import { workData } from "../../components/Sliders/WorkSlider";
-import Link from "next/link";
 
 const Project = () => {
   const { query } = useRouter();
@@ -50,6 +49,17 @@ const Project = () => {
               {activeProject?.title} <span className="text-accent">.</span>
             </motion.h2>
           </div>
+          {activeProject?.description ? (
+            <motion.div
+              variants={fadeIn("up", 0.4)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="text-left text-sm mt-6"
+            >
+              {activeProject?.description} <br />
+            </motion.div>
+          ) : null}
           <motion.div
             variants={fadeIn("down", 0.6)}
             initial="hidden"
@@ -68,11 +78,14 @@ const Project = () => {
           >
             <b className="text-gray-300">В проекте имеется: </b>
             <p className="text-gray-400">
-              Корзина <br /> Поиск по категориям <br /> Адаптивная верстка{" "}
-              <br /> Заказ обратного звонка <br /> Отправка данных клиента в
-              телеграм <br /> Админка чтобы редактировать товары
+              {activeProject?.inProject.map((item) => {
+                return (
+                  <>
+                    {item} <br />
+                  </>
+                );
+              })}
             </p>
-            {/* {activeProject?.description} <br /> */}
           </motion.div>
         </div>
       </div>

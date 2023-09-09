@@ -57,9 +57,16 @@ export const workData = [
   {
     id: 1,
     title: "Мужская одежда",
-    description:
-      "Интернет-магазин мужской одежды, где владелец может выставить весь свой ассортимент товаров, чтобы удобно продемонстрировать клиентам. Также есть возможность оформить заказ, данные клиента приходят в телеграм.",
+    description: "",
     imgUrl: "/portfolio/akula/main.png",
+    inProject: [
+      "Корзина",
+      "Поиск по категориям",
+      "Адаптивная верстка",
+      "Заказ обратного звонка",
+      "Отправка данных клиента в телеграм",
+      "Админка, чтобы редактировать товары",
+    ],
     imgUrls: [
       "/portfolio/akula/1.1.png",
       "/portfolio/akula/1.2.png",
@@ -78,6 +85,7 @@ export const workData = [
     title: "Сервис доставки еды",
     description: "",
     imgUrl: "/portfolio/food-dashboard/main.png",
+    inProject: ["Корзина", "Поиск по категориям"],
     imgUrls: [
       "/portfolio/food-dashboard/1.png",
       "/portfolio/food-dashboard/2.png",
@@ -90,6 +98,7 @@ export const workData = [
     title: "Кроссовки",
     description: "",
     imgUrl: "/portfolio/sneakers/main.png",
+    inProject: ["Корзина", "Поиск по категориям", "Адаптивная верстка"],
     imgUrls: [
       "/portfolio/sneakers/1.1.png",
       "/portfolio/sneakers/1.2.png",
