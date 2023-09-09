@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import Bulb from "../../components/Bulb";
 import { Circles } from "../../components/Circles";
-import ServiceSlider from "../../components/ServiceSlider";
+import ServiceSlider from "../../components/Sliders/ServiceSlider";
 
 import { fadeIn } from "../../variants";
 
