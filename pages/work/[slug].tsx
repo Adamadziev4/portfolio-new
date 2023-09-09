@@ -49,15 +49,6 @@ const Project = () => {
             >
               {activeProject?.title} <span className="text-accent">.</span>
             </motion.h2>
-            <motion.p
-              variants={fadeIn("up", 0.4)}
-              initial="hidden"
-              animate="show"
-              exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0"
-            >
-              {activeProject?.description} <br />
-            </motion.p>
           </div>
           <motion.div
             variants={fadeIn("down", 0.6)}
@@ -67,6 +58,21 @@ const Project = () => {
             className="w-full xl:max-w-[65%]"
           >
             <ProjectSlider id={Number(query.slug)} />
+          </motion.div>
+          <motion.div
+            variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="text-left text-sm mt-6"
+          >
+            <b className="text-gray-300">В проекте имеется: </b>
+            <p className="text-gray-400">
+              Корзина <br /> Поиск по категориям <br /> Адаптивная верстка{" "}
+              <br /> Заказ обратного звонка <br /> Отправка данных клиента в
+              телеграм <br /> Админка чтобы редактировать товары
+            </p>
+            {/* {activeProject?.description} <br /> */}
           </motion.div>
         </div>
       </div>
