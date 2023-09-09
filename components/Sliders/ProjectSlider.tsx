@@ -3,7 +3,7 @@ import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
-import { workData } from "../../components/WorkSlider";
+import { workData } from "./WorkSlider";
 
 export const ProjectSlider = ({ id }: { id: number }) => {
   const activeProject = workData.find((item) => item.id === id);

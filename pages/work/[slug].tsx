@@ -5,7 +5,7 @@ import { Circles } from "../../components/Circles";
 import { ProjectSlider } from "../../components/Sliders/ProjectSlider";
 import { fadeIn } from "../../variants";
 import { useRouter } from "next/router";
-import { workData } from "../../components/WorkSlider";
+import { workData } from "../../components/Sliders/WorkSlider";
 import Link from "next/link";
 
 const Project = () => {
@@ -15,12 +15,12 @@ const Project = () => {
 
   return (
     <div className="h-full bg-primary/30 py-48 flex items-center">
-      <p className="absolute bottom-40 right-3 w-36 text-right text-[12px] md:hidden">
+      <p className="absolute bottom-[150px] right-3 w-36 text-right text-[12px] md:hidden">
         Другие работы
         <svg
           viewBox="0 -4.5 20 20"
           fill="#000000"
-          className="w-4 ml-[90px] mt-1"
+          className="w-4 ml-[95px] mt-1"
         >
           <g transform="translate(-220.000000, -6684.000000)" fill="gray">
             <g id="icons" transform="translate(56.000000, 160.000000)">
