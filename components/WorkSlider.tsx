@@ -6,6 +6,7 @@ import { BsArrowRight } from "react-icons/bs";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 export const workSlides = {
   slides: [
@@ -56,20 +57,45 @@ export const workData = [
   {
     id: 1,
     title: "Мужская одежда",
+    description: "",
     imgUrl: "/portfolio/akula/main.png",
-    imgUrls: ["", "", ""],
+    imgUrls: [
+      "/portfolio/akula/1.1.png",
+      "/portfolio/akula/1.2.png",
+      "/portfolio/akula/1.3.png",
+      "/portfolio/akula/main.png",
+      "/portfolio/akula/4.png",
+      "/portfolio/akula/5.png",
+      "/portfolio/akula/6.png",
+      "/portfolio/akula/7.png",
+      "/portfolio/akula/8.png",
+    ],
   },
   {
     id: 2,
     title: "Сервис доставки еды",
+    description: "",
     imgUrl: "/portfolio/food-dashboard/main.png",
-    imgUrls: ["", "", ""],
+    imgUrls: [
+      "/portfolio/food-dashboard/1.png",
+      "/portfolio/food-dashboard/2.png",
+      "/portfolio/food-dashboard/3.png",
+      "/portfolio/food-dashboard/4.png",
+    ],
   },
   {
     id: 3,
     title: "Кроссовки",
+    description: "",
     imgUrl: "/portfolio/sneakers/main.png",
-    imgUrls: ["", "", ""],
+    imgUrls: [
+      "/portfolio/sneakers/1.1.png",
+      "/portfolio/sneakers/1.2.png",
+      "/portfolio/sneakers/1.3.png",
+      "/portfolio/sneakers/2.png",
+      "/portfolio/sneakers/4.png",
+      "/portfolio/sneakers/5.png",
+    ],
   },
 ];
 
@@ -123,7 +149,8 @@ const WorkSlider = () => {
     >
       {workData.slice(0, 8).map((item) => (
         <SwiperSlide key={item.id}>
-          <div
+          <Link
+            href={`/work/${item.id}`}
             className="relative rounded-lg overflow-hidden flex items-center justify-center group cursor-pointer"
             key={item.imgUrl}
           >
@@ -163,7 +190,7 @@ const WorkSlider = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
