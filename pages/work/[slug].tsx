@@ -15,7 +15,7 @@ const Project = () => {
 
   return (
     <div className="h-full bg-primary/30 py-48 flex items-center">
-      <p className="absolute bottom-24 right-3 w-36 text-right text-[12px]">
+      <p className="absolute bottom-32 right-3 w-36 text-right text-[12px] md:hidden">
         Другие работы
         <svg
           viewBox="0 -4.5 20 20"
