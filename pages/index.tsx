@@ -27,7 +27,7 @@ const Home = () => {
           >
             Добро <span className="text-accent">пожаловать</span> <br />
           </motion.h1>
-          <motion.p
+          <motion.div
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
@@ -44,7 +44,7 @@ const Home = () => {
             <p className="xl:hidden text-sm">
               Кликните на кружочек, <br /> чтобы посмотреть мои работы
             </p>
-          </motion.p>
+          </motion.div>
           <div className="flex justify-center xl:hidden relative z-10">
             <ProjectsBtn />
           </div>

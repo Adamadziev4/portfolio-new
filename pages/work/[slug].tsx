@@ -76,8 +76,22 @@ const Project = () => {
             exit="hidden"
             className="text-left text-sm mt-6"
           >
-            <b className="text-gray-300">В проекте имеется: </b>
-            <p className="text-gray-400">
+            <motion.b
+              variants={fadeIn("up", 0.4)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="text-gray-300"
+            >
+              В проекте имеется:{" "}
+            </motion.b>
+            <motion.p
+              variants={fadeIn("up", 0.4)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="text-gray-400"
+            >
               {activeProject?.inProject.map((item) => {
                 return (
                   <>
@@ -85,7 +99,7 @@ const Project = () => {
                   </>
                 );
               })}
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </div>

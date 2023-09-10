@@ -85,7 +85,7 @@ export const workData = [
     title: "Сервис доставки еды",
     description: "",
     imgUrl: "/portfolio/food-dashboard/main.png",
-    inProject: ["Корзина", "Поиск по категориям"],
+    inProject: ["Корзина", "Поиск по категориям", "Форма оформления заказа"],
     imgUrls: [
       "/portfolio/food-dashboard/1.png",
       "/portfolio/food-dashboard/2.png",
@@ -102,7 +102,7 @@ export const workData = [
     imgUrls: [
       "/portfolio/sneakers/1.1.png",
       "/portfolio/sneakers/1.2.png",
-      "/portfolio/sneakers/1.3.png",
+      // "/portfolio/sneakers/1.3.png",
       "/portfolio/sneakers/2.png",
       "/portfolio/sneakers/4.png",
       "/portfolio/sneakers/5.png",
