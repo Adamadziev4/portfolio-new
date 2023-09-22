@@ -38,7 +38,7 @@ const Questions = () => {
           >
             Вопрос / ответ <span className="text-accent">.</span>
           </motion.h2>
-          <div className="mt-12 w-full">
+          <div className="mt-2 w-full">
             {questions.map(({ id, question, answer }) => (
               <>
                 <div
@@ -76,7 +76,7 @@ const Questions = () => {
                   {activeAnswer === id ? (
                     <div
                       dangerouslySetInnerHTML={{ __html: answer }}
-                      className="lg:text-lg mt-4 text-sm"
+                      className="lg:text-lg mt-4 text-sm "
                     />
                   ) : null}
                 </div>
