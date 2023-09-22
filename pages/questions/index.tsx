@@ -11,9 +11,9 @@ const questions = [
          <p><b>2</b>. Ваш сайт может стать дополнительным источником трафика. Укажите его в своих соц.сетях, а также продвигайте его через контекстную рекламу, рекламу на визитках, баннерах и тд</p> <br/>
          <p><b>3</b>. Посредством сайта вы выделитесь среди конкурентов, у которых нет своего сайта</p> <br/>
          <p><b>4</b>. Через интернет-магазин вы сможете стимулировать пользователей к покупке. Например сделав акцент на определенных товарах, указав ваши акции, выделив товары со скидкой и тд ...</p> <br/>
-         <p><b>5</b>. Кто-то купит через переписку, кто-то придет на точку, а кто-то закажет через сайт</p> <br/>
          `,
   },
+  // <p><b>5</b>. Кто-то купит через переписку, кто-то придет на точку, а кто-то закажет через сайт</p> <br/>
   {
     id: 2,
     question: "А если мне сайт не понравится",
@@ -25,7 +25,7 @@ const Questions = () => {
   const [activeAnswer, setActiveAnswer] = React.useState(0);
 
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full bg-primary/30 py-28 text-center xl:text-left">
       <Circles />
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         <div className="flex-1 flex flex-col w-full">
@@ -38,7 +38,7 @@ const Questions = () => {
           >
             Вопрос / ответ <span className="text-accent">.</span>
           </motion.h2>
-          <div className="mt-2 w-full grid gap-4">
+          <div className="w-full grid gap-4">
             {questions.map(({ id, question, answer }) => (
               <>
                 <div
