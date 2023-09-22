@@ -9,9 +9,13 @@ import {
   HiEnvelope,
 } from "react-icons/hi2";
 
+import { RiCodeBoxFill } from "react-icons/ri";
+import { FaRegQuestionCircle } from "react-icons/fa";
+
 export const navData = [
   { name: "Главная", path: "/", icon: <HiHome /> },
-  { name: "Технологии", path: "/about", icon: <HiRectangleGroup /> },
+  { name: "Технологии", path: "/about", icon: <RiCodeBoxFill /> },
+  { name: "Вопросы", path: "/questions", icon: <FaRegQuestionCircle /> },
   // { name: "Мои работы", path: "/my-services", icon: <HiRectangleGroup /> },
   { name: "Мои работы", path: "/work", icon: <HiViewColumns /> },
   // {
