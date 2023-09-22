@@ -38,14 +38,14 @@ const Questions = () => {
           >
             Вопрос / ответ <span className="text-accent">.</span>
           </motion.h2>
-          <div className="mt-2 w-full">
+          <div className="mt-2 w-full grid gap-4">
             {questions.map(({ id, question, answer }) => (
               <>
                 <div
                   onClick={() =>
                     setActiveAnswer((prev) => (prev === id ? 0 : id))
                   }
-                  className="border border-white py-2 md:py-4 px-4 w-[100%] text-left cursor-pointer"
+                  className="border-b border-white py-2 md:py-4 px-4 w-[100%] text-left cursor-pointer"
                 >
                   <div className="flex justify-between items-center gap-8 text-base lg:text-lg">
                     {question}
